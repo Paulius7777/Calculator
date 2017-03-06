@@ -9,6 +9,10 @@ public class Mainn {
     public static void main(String[]args) {
 
         DB result = new DB();
+        Menu menu =  new Menu();
+        menu.operationsadd();
+        menu.operation("+");
+
 
         double n1, n2;
         String operation;

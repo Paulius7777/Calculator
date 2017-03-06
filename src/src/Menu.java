@@ -10,25 +10,28 @@ public class Menu {
     private summinus twovalues = new summinus();
     private SinCos onevalue = new SinCos();
 
-    public  void operations(){
+    public  void operationsadd() {
         operations.add("Suma +");
         operations.add("Atimtis -");
         operations.add("Daugyba *");
         operations.add("Dalyba /");
         operations.add("sin sin");
-        operations.add("cos cos");
-        operations.add("sin sin");
-        operations.add("");
+        operations.add("cos Cos");
+        operations.add("sin Sin");
+        operations.add("tangent Tan");
+        operations.add("cotangent CoTang");
 
+        for (String cell:operations){
+            System.out.println("Operacijos    " +cell);
+        }
+    }
+    public void operation(String simbol){
         Scanner op = new Scanner(System.in);
         System.out.println("Enter your operation");
         String operation = op.next();
-        
-
 
         switch (operation) {
             case "+":
-
                 twovalues.sum(reader.nextDouble(), reader.nextDouble());
                 break;
 
@@ -37,11 +40,11 @@ public class Menu {
                 break;
 
             case "/":
-                System.out.println("Your answer is " + (n1 / n2));
+                System.out.println("Your answer is "  );
                 break;
 
             case "*":
-                System.out.println("Your asnwer is " + (n1 * n2));
+                System.out.println("Your asnwer is " );
                 break;
 
             default:
