@@ -24,6 +24,8 @@ public class Mainn {
         System.out.println("Enter your operation");
         operation = op.next();
 
+        //TODO
+        //Padarykite Meniu kitame class faile :)
 
         switch (operation) {
             case "+":
