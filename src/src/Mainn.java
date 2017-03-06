@@ -7,6 +7,9 @@ import java.util.Scanner;
 public class Mainn {
     public static void main(String[]args) {
 
+
+        SinCos sincos= new SinCos(90);
+        sincos.Sin(90);
         double n1, n2;
         String operation;
         Scanner scannerObject = new Scanner(System.in);
