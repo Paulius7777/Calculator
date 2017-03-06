@@ -9,4 +9,10 @@ public class DB {
     public DB() {
         this.values = new ArrayList<Double>();
     }
+
+    public void add(double value){
+
+        values.add(value);
+    }
+
 }
