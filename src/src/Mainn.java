@@ -2,10 +2,13 @@
  * Created by student on 17.3.6.
  */
 
+
 import java.util.Scanner;
 
 public class Mainn {
     public static void main(String[]args) {
+
+        DB result = new DB();
 
         double n1, n2;
         String operation;
@@ -21,9 +24,11 @@ public class Mainn {
         System.out.println("Enter your operation");
         operation = op.next();
 
+
         switch (operation) {
             case "+":
-                System.out.println("Your answer is " + (n1 + n2));
+
+                System.out.printf("Your answer is " + (n1 + n2));
                 break;
 
             case "-":
