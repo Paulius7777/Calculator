@@ -7,8 +7,12 @@ import java.util.Scanner;
 public class Menu {
     private Scanner reader = new Scanner(System.in);
     private ArrayList<String> operations = new ArrayList<String>();
-    private summinus twovalues = new summinus();
+    private Summinus twovalues = new Summinus();
     private SinCos onevalue = new SinCos();
+    private QuadraticEquation qe = new QuadraticEquation();
+    private DB all = new DB();
+    private double sk;
+    private double sk2;
 
 
     public void operationsadd() {
@@ -21,6 +25,8 @@ public class Menu {
         operations.add("sin Sin");
         operations.add("tangent Tan");
         operations.add("cotangent CoTang");
+        operations.add("QuadraticEquation eQ");
+        operations.add("Last Operation L");
 
         for (String cell : operations) {
             System.out.println("Operacijos    " + cell);
@@ -29,28 +35,45 @@ public class Menu {
 
     public void operation() {
         Scanner op = new Scanner(System.in);
-        System.out.println("Iveskite skaiciu");
-        double sk1 = reader.nextDouble();
         System.out.println("Enter your operation");
         String operation = op.next();
 
         switch (operation) {
             case "+":
-            secondNumber();
-                System.out.println("Atsakymas" );
+
+                twovalues.sum(firstNumber(), secondNumber());
                 break;
-
             case "-":
-
+//
+                twovalues.minus(firstNumber(), secondNumber());
                 break;
 
             case "/":
-                System.out.println("Your answer is ");
+
+                twovalues.diff(firstNumber(), secondNumber());
                 break;
 
             case "*":
-                System.out.println("Your asnwer is ");
+
+                twovalues.multiplay(firstNumber(), secondNumber());
                 break;
+            case "Sin":
+                onevalue.Sin(firstNumber());
+                break;
+            case "Cos":
+                onevalue.Cos(firstNumber());
+                break;
+            case "Tan":
+                onevalue.Tan(firstNumber());
+                break;
+            case "CoTang":
+                onevalue.CoTang(firstNumber());
+                break;
+            case "eQ":
+                qe.getEquation(firstNumber(),secondNumber(),tridNumber());
+            case "L":
+                all.getvalues();
+
 
             default:
                 System.out.println("Je ne sais pas");
@@ -60,10 +83,25 @@ public class Menu {
 
     }
 
-    public double secondNumber() {
-        System.out.println("Iveskite antra skaiciu");
-        double sk2 = reader.nextDouble();
-        return sk2;
+    private double tridNumber() {
+        System.out.println("Iveskite trecia skaiciu");
+        double z = reader.nextDouble();
+        return z;
     }
+
+    private double secondNumber() {
+        System.out.println("Iveskite antra skaiciu");
+        double y = reader.nextDouble();
+        return y;
+    }
+
+    private double firstNumber() {
+        System.out.println("Iveskite skaiciu");
+        double x = reader.nextDouble();
+        return x;
+    }
+
+
 }
+
 

@@ -14,5 +14,10 @@ public class DB {
 
         values.add(value);
     }
+    public void getvalues(){
+        for(Double cell: this.values){
+            System.out.println("Paskutines operacijos" + cell);
+        }
+    }
 
 }
